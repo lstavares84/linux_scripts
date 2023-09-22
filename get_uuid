@@ -46,12 +46,7 @@ uuid=$(blkid -s UUID -o value /dev/"$selected_partition_cleaned")
 
 # Verifique se o UUID foi encontrado
 if [ -n "$uuid" ]; then
-    # Salve o UUID na variável "UUID_backup"
-    UUID_backup="$uuid"
-    echo "UUID da partição $selected_partition_cleaned foi salvo em \$UUID_backup"
+    echo $uuid
 else
     echo "Partição não encontrada ou UUID não disponível."
 fi
-
-
-echo $UUID_backup
