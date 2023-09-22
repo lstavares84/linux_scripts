@@ -6,7 +6,7 @@ output_file="UUID.txt"
 lsblk -o NAME,SIZE,RO,FSTYPE,TYPE,MOUNTPOINT,UUID,PTUUID
 
 # Lista de partições disponíveis
-partitions=($(lsblk -o NAME,TYPE | grep 'part' | awk '{print $1}'))
+partitions=($(lsblk -o NAME,TYPE | grep '/dev/sd' | awk '{print $1}'))
 num_partitions=${#partitions[@]}
 
 # Verifique se há pelo menos uma partição
