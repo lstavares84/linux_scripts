@@ -16,5 +16,5 @@ sudo apt install apt-transport-https -y
 sudo apt update
 sudo apt install code # or code-insiders
 
-#GPARTED
-sudo apt install gparted -y
+#SMALL TOOLS
+
