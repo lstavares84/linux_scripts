@@ -16,5 +16,7 @@ sudo apt install apt-transport-https -y
 sudo apt update
 sudo apt install code # or code-insiders
 
-#SMALL TOOLS
-
+#XMIND
+wget -O xmind.deb https://www.xmind.app/zen/download/linux_deb/
+sudo dpkg -i xmind.deb
+sudo rm xmind.deb
