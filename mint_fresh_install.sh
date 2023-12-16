@@ -16,7 +16,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update
-sudo apt install code # or code-insiders
+sudo apt install code -y # or code-insiders
 
 #FLATPAK
 sudo apt update
@@ -31,5 +31,16 @@ sudo dpkg -i xmind.deb
 sudo rm xmind.deb
 #SPOTIFY
 flatpak install flathub com.spotify.Client
+
+#NOMACS
+sudo apt-get install debhelper cdbs qt5-qmake qttools5-dev-tools qttools5-dev libqt5svg5-dev qt5-image-formats-plugins libexiv2-dev libraw-dev libopencv-dev cmake libtiff-dev libquazip5-dev libwebp-dev git build-essential lcov libzip-dev
+git clone https://github.com/nomacs/nomacs.git
+cd nomacs
+cd ImageLounge
+mkdir build
+cd build
+cmake ../.
+make
+sudo make install
 
 
